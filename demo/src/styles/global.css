@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "OperatorMono";
-  src: url("../../static/fonts/mono/OperatorMono-Light.otf") format("opentype");
+  font-family: "SpaceMono";
+  src: url("../../static/fonts/mono/SpaceMono-Regular.ttf") format("truetype");
 } 
 
 @font-face {

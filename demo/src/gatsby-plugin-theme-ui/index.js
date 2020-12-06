@@ -1,12 +1,12 @@
 import codeTheme from "@theme-ui/prism/presets/prism-funky.json"
-import baseTheme from "@alicetaria/gatsby-theme-terminal/src/gatsby-plugin-theme-ui"
+import baseTheme from "@chuan-khuna/gatsby-theme-terminal/src/gatsby-plugin-theme-ui"
 
 export default {
   ...baseTheme,
   fonts: {
-    body: '"OperatorMono", "Sarabun"',
-    heading: '"OperatorMono", "Sarabun"',
-    mono: '"OperatorMono", "Sarabun"',
+    body: '"SpaceMono", "Sarabun"',
+    heading: '"SpaceMono", "Sarabun"',
+    mono: '"SpaceMono", "Sarabun"',
   },
   colors: {
     ...baseTheme.colors,
@@ -25,9 +25,9 @@ export default {
         secondary: "#f73859",
         success: "#48ADA9",
         background: "#f9f7f7",
-        surface: "#EDE8E8",
-      },
-    },
+        surface: "#EDE8E8"
+      }
+    }
   },
   styles: {
     ...baseTheme.styles,

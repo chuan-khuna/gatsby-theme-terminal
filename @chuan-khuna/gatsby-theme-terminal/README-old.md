@@ -21,7 +21,7 @@ To help you get started you can either clone the starter [gatsby-starter-termina
 ### Install
 
 ```
-npm install @alicetaria/gatsby-theme-terminal
+npm install @chuan-khuna/gatsby-theme-terminal
 ```
 
 ### Install Peer Dependencies
@@ -34,7 +34,7 @@ npm install @mdx-js/mdx @mdx-js/react gatsby gatsby-plugin-mdx gatsby-source-fil
 
 ### gatsby-config.js
 
-Add the `siteMetaData` and `@alicetaria/gatsby-theme-terminal` to your `gatsby-config.js`
+Add the `siteMetaData` and `@chuan-khuna/gatsby-theme-terminal` to your `gatsby-config.js`
 
 ```
 // gatsby-config.js
@@ -51,7 +51,7 @@ module.exports = {
       sidebarWidth: 240 // optional,
     },
   },
-  plugins: ['@alicetaria/gatsby-theme-terminal']
+  plugins: ['@chuan-khuna/gatsby-theme-terminal']
 }
 ```
 
@@ -98,7 +98,7 @@ Use the `source` option in `gatsby-config.js`
 ...
   plugins: [
     {
-      resolve: `@alicetaria/gatsby-theme-terminal`,
+      resolve: `@chuan-khuna/gatsby-theme-terminal`,
       options: {
         source: [`posts`, `projects`], // can be a string or array of strings
       },
@@ -210,11 +210,11 @@ You can see more about how to use the theme components in the [demo](https://gat
 
 There is very little to shadow because almost everything is exposed by the components but you might want to add your own logo.
 
-To do this create the following directories `@alicetaria/gatsby-theme-terminal/components/Logo` in the `src` directory of your project and then create a `Logo.js` file. You can do anything you like in here.
+To do this create the following directories `@chuan-khuna/gatsby-theme-terminal/components/Logo` in the `src` directory of your project and then create a `Logo.js` file. You can do anything you like in here.
 
 ```
 |-- src
-    |-- @alicetaria
+    |-- @chuan-khuna
       |-- gatsby-theme-terminal
         |-- components
           |-- Logo
@@ -228,7 +228,7 @@ To do this create the following directory `src/gatsby-plugin-theme-ui` and then 
 ```javascript
 // src/gatsby-plugin-theme-ui/index.js
 
-import baseTheme from '@alicetaria/gatsby-theme-terminal/src/gatsby-plugin-theme-ui'
+import baseTheme from '@chuan-khuna/gatsby-theme-terminal/src/gatsby-plugin-theme-ui'
 
 export default {
   ...baseTheme,
@@ -247,6 +247,6 @@ export default {
 
 favicon(s) need to be saved in `static/images` and named `favicon-16x16.png` and `favicon-32x32.png` along with an `.icon` file called `favicon.ico`
 
-If you're using **gatsby-theme-terminal** in your project i'd love to hear from you [@alicetaria](https://twitter.com/PaulieScanlon)
+If you're using **gatsby-theme-terminal** in your project i'd love to hear from you [@chuan-khuna](https://twitter.com/PaulieScanlon)
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P31B7G8)

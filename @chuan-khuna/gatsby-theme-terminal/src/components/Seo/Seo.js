@@ -40,7 +40,7 @@ export const Seo = ({
       <meta name="description" content={description} />
       <meta name="image" content={image} />
       <meta name="image:alt" content={description} />
-      <meta name="gatsby-theme" content="@alicetaria/gatsby-theme-terminal" />
+      <meta name="gatsby-theme" content="@chuan-khuna/gatsby-theme-terminal" />
       <meta name="keywords" content={keywords.join(', ')} />
 
       {/* Facebook */}

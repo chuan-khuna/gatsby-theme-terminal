@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { Box, NavLink } from 'theme-ui'
 import { Link as GatsbyLink } from 'gatsby'
 
-import { useNavigation } from '@alicetaria/gatsby-theme-terminal/src/data/'
+import { useNavigation } from '@chuan-khuna/gatsby-theme-terminal/src/data/'
 import { Logo } from '../Logo'
 
 import ThemeSwitch from './ThemeSwitch'

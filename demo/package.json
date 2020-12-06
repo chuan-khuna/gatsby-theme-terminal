@@ -7,7 +7,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
-    "@alicetaria/gatsby-theme-terminal": "*",
+    "@chuan-khuna/gatsby-theme-terminal": "*",
     "date-fns": "^2.10.0",
     "gatsby": "^2.24.12",
     "gatsby-plugin-google-analytics": "^2.1.36",
