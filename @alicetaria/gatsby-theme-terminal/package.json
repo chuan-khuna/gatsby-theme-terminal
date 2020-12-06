@@ -1,0 +1,61 @@
+{
+  "name": "@alicetaria/gatsby-theme-terminal",
+  "description": "A zero component Gatsby theme for developers",
+  "version": "2020.12.06",
+  "author": "Chuan Khuna",
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@theme-ui/color": "^0.3.0",
+    "@theme-ui/prism": "^0.3.0",
+    "date-fns": "^2.10.0",
+    "gatsby-image": "^2.2.41",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-remark-katex": "^3.6.0",
+    "gatsby-transformer-remark": "^2.12.0",
+    "gatsby-transformer-sharp": "^2.3.14",
+    "katex": "^0.12.0",
+    "prop-types": "^15.7.2",
+    "react-helmet": "^5.2.1",
+    "theme-ui": "^0.3.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "peerDependencies": {
+    "@mdx-js/mdx": "^1.5.5",
+    "@mdx-js/react": "^1.5.5",
+    "gatsby": "^2.24.12",
+    "gatsby-plugin-mdx": "^1.0.73",
+    "gatsby-source-filesystem": "^2.1.46",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "publish": "npm login"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauliescanlon/gatsby-theme-terminal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pauliescanlon/gatsby-theme-terminal/issues"
+  },
+  "homepage": "https://gatsby-theme-terminal.netlify.com/",
+  "main": "index.js"
+}

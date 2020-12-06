@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "clean": "yarn workspace demo clean",
+    "serve": "yarn workspace demo serve",
+    "develop": "yarn workspace demo develop",
+    "build": "yarn workspace demo build",
+    "prettier": "yarn workspace demo format && yarn workspace @alicetaria/gatsby-theme-terminal format",
+    "release": "node copy-readme.js && yarn workspace @alicetaria/gatsby-theme-terminal publish"
+  },
+  "workspaces": [
+    "@alicetaria/gatsby-theme-terminal",
+    "demo"
+  ]
+}

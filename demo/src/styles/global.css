@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "OperatorMono";
+  src: url("../../static/fonts/mono/OperatorMono-Light.otf") format("opentype");
+} 
+
+@font-face {
+  font-family: "Sarabun";
+  src: url("../../static/fonts/Sarabun-Regular.ttf") format("truetype");
+} 
