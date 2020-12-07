@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
-import { Box, NavLink } from 'theme-ui'
-import { Link as GatsbyLink } from 'gatsby'
+import React, { Fragment } from "react"
+import { Box, NavLink } from "theme-ui"
+import { Link as GatsbyLink } from "gatsby"
 
-import { useNavigation } from '@chuan-khuna/gatsby-theme-terminal/src/data/'
-import { Logo } from '../Logo'
+import { useNavigation } from "@chuan-khuna/gatsby-theme-terminal/src/data/"
+import { Logo } from "../Logo"
 
-import ThemeSwitch from './ThemeSwitch'
+import ThemeSwitch from "./ThemeSwitch"
 
 export const Nav = () => {
   const {
@@ -13,7 +13,7 @@ export const Nav = () => {
   } = useNavigation()
 
   const navigation = edges.reduce((routes, route) => {
-    return route.node.fields.slug === '/'
+    return route.node.fields.slug === "/"
       ? [route, ...routes]
       : [...routes, route]
   }, [])
@@ -22,16 +22,16 @@ export const Nav = () => {
     <Fragment>
       <Box
         sx={{
-          alignItems: 'center',
-          display: 'flex',
+          alignItems: "center",
+          display: "flex",
           height: theme => `${theme.space[5]}px`,
           justifyContent: [
-            'flex-start',
-            'flex-start',
-            'flex-start',
-            'flex-end',
+            "flex-start",
+            "flex-start",
+            "flex-start",
+            "flex-end",
           ],
-          overFlow: 'hidden',
+          overFlow: "hidden",
           px: 4,
         }}
       >
@@ -40,7 +40,7 @@ export const Nav = () => {
       <Box
         as="nav"
         sx={{
-          height: '100%',
+          height: "100%",
           py: 3,
           px: 4,
         }}
@@ -48,7 +48,7 @@ export const Nav = () => {
         <Box
           as="ul"
           sx={{
-            listStyle: 'none',
+            listStyle: "none",
             mt: 2,
             p: 0,
           }}
@@ -64,7 +64,7 @@ export const Nav = () => {
                 key={index}
                 as="li"
                 sx={{
-                  textAlign: ['left', 'left', 'left', 'right'],
+                  textAlign: ["left", "left", "left", "right"],
                 }}
               >
                 <NavLink as={GatsbyLink} to={slug}>
@@ -73,7 +73,9 @@ export const Nav = () => {
               </Box>
             )
           })}
-          <Box as="li"><ThemeSwitch /></Box>
+          <Box as="li">
+            <ThemeSwitch />
+          </Box>
         </Box>
       </Box>
     </Fragment>

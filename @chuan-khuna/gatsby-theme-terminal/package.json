@@ -1,7 +1,7 @@
 {
-  "name": "@chuan-khuna/gatsby-theme-terminal",
+  "name": "@chuan-khuna/gatsby-theme-terminal-alicetaria",
   "description": "A zero component Gatsby theme for developers",
-  "version": "2020.12.06",
+  "version": "20201207.1.0",
   "author": "Chuan Khuna",
   "owener": "chuan-khuna",
   "dependencies": {
@@ -53,11 +53,11 @@
     "publish": "npm login"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/@chuan-khuna"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chuan-khuna/gatsby-theme-terminal-chuan-khuna.git"
+    "url": "git+https://github.com/chuan-khuna/gatsby-theme-terminal.git"
   },
   "main": "index.js"
 }

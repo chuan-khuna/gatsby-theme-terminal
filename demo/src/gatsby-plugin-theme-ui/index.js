@@ -25,9 +25,9 @@ export default {
         secondary: "#f73859",
         success: "#48ADA9",
         background: "#f9f7f7",
-        surface: "#EDE8E8"
-      }
-    }
+        surface: "#EDE8E8",
+      },
+    },
   },
   styles: {
     ...baseTheme.styles,

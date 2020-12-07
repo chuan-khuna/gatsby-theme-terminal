@@ -42,26 +42,6 @@ module.exports = themeOptions => {
     },
     plugins: [
       `gatsby-plugin-react-helmet`,
-      `gatsby-transformer-sharp`,
-      {
-        resolve: `gatsby-plugin-sharp`,
-        options: {
-          defaultQuality: 50
-        }
-      },
-      {
-        resolve: `gatsby-transformer-remark`,
-        options: {
-          plugins: [
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: 640,
-              },
-            },
-          ],
-        },
-      },
       `gatsby-plugin-theme-ui`,
       {
         resolve: `gatsby-plugin-google-fonts`,
@@ -71,9 +51,18 @@ module.exports = themeOptions => {
         },
       },
       {
+        resolve: `gatsby-transformer-remark`,
+        options: {
+          plugins: [
+            {
+              resolve: `gatsby-remark-images`,
+            },
+          ],
+        },
+      },
+      {
         resolve: `gatsby-plugin-mdx`,
         options: {
-          extensions: [`.mdx`, `.md`],
           defaultLayouts: {
             default: require.resolve(`./src/layouts/PageLayout.js`),
           },
@@ -81,16 +70,21 @@ module.exports = themeOptions => {
             {
               resolve: `gatsby-remark-images`,
               options: {
-                maxWidth: 640,
+                maxWidth: 1080,
+                linkImagesToOriginal: false,
               },
             },
           ],
-          remarkPlugins: [
-            require("remark-html-katex")
-          ]
+          remarkPlugins: [require('remark-html-katex')],
         },
       },
-
+      `gatsby-transformer-sharp`,
+      {
+        resolve: `gatsby-plugin-sharp`,
+        options: {
+          defaultQuality: 90,
+        },
+      },
 
       // Theme pages (Dummy page)
       {
