@@ -42,8 +42,26 @@ module.exports = themeOptions => {
     },
     plugins: [
       `gatsby-plugin-react-helmet`,
-      `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,
+      {
+        resolve: `gatsby-plugin-sharp`,
+        options: {
+          defaultQuality: 50
+        }
+      },
+      {
+        resolve: `gatsby-transformer-remark`,
+        options: {
+          plugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 640,
+              },
+            },
+          ],
+        },
+      },
       `gatsby-plugin-theme-ui`,
       {
         resolve: `gatsby-plugin-google-fonts`,
@@ -59,7 +77,17 @@ module.exports = themeOptions => {
           defaultLayouts: {
             default: require.resolve(`./src/layouts/PageLayout.js`),
           },
-          gatsbyRemarkPlugins: [`gatsby-remark-katex`]
+          gatsbyRemarkPlugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 640,
+              },
+            },
+          ],
+          remarkPlugins: [
+            require("remark-html-katex")
+          ]
         },
       },
 
