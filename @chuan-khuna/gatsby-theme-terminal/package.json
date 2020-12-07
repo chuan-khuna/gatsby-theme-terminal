@@ -1,7 +1,7 @@
 {
   "name": "@chuan-khuna/gatsby-theme-terminal",
   "description": "A zero component Gatsby theme for developers",
-  "version": "20201207.1.0",
+  "version": "20201207.22.13",
   "author": "Chuan Khuna",
   "owener": "chuan-khuna",
   "dependencies": {
@@ -53,7 +53,7 @@
     "publish": "npm login"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@chuan-khuna"
+    "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",

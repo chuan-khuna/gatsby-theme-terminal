@@ -56,6 +56,10 @@ module.exports = themeOptions => {
           plugins: [
             {
               resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 1080,
+                linkImagesToOriginal: true,
+              },
             },
             {
               resolve: `gatsby-remark-katex`,
@@ -74,7 +78,7 @@ module.exports = themeOptions => {
               resolve: `gatsby-remark-images`,
               options: {
                 maxWidth: 1080,
-                linkImagesToOriginal: false,
+                linkImagesToOriginal: true,
               },
             },
             {
