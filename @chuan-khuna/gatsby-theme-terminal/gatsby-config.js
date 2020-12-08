@@ -92,7 +92,7 @@ module.exports = themeOptions => {
       {
         resolve: `gatsby-plugin-sharp`,
         options: {
-          defaultQuality: 90,
+          defaultQuality: 75,
         },
       },
 

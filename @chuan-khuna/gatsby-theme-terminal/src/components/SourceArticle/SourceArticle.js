@@ -18,7 +18,7 @@ import Img from 'gatsby-image'
 
 import { Main } from '../Main'
 
-const formatDate = date => format(new Date(date), 'd-MMM-u')
+const formatDate = date => format(new Date(date), 'yyyy-MM-dd')
 
 export const SourceArticle = ({
   title,

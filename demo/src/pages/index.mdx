@@ -152,7 +152,7 @@ Here we use it to return all the `projects` by using the filter prop
                   p: 3,
                 }}
               > 
-                <Text sx={{fontSize:0, color:'muted'}}>{format(new Date(date), 'd-MMM-u')}</Text>
+                <Text sx={{fontSize:0, color:'muted'}}>{format(new Date(date), 'yyyy-MM-dd')}</Text>
                 <Heading variant="styles.h4" sx={{color: 'text'}}>{title}</Heading>
                 <Text sx={{textDecoration: 'underline'}}>View project</Text>
               </Card>
@@ -205,7 +205,7 @@ Here we use it to return the last 3 `posts`
                   p: 3,
                 }}
               > 
-                <Text sx={{fontSize:0, color:'muted'}}>{format(new Date(date), 'd-MMM-u')}</Text>
+                <Text sx={{fontSize:0, color:'muted'}}>{format(new Date(date), 'yyyy-MM-dd')}</Text>
                 <Heading variant="styles.h4" sx={{color: 'text'}}>{title}</Heading>
                 <Text sx={{textDecoration: 'underline'}}>View project</Text>
               </Card>
