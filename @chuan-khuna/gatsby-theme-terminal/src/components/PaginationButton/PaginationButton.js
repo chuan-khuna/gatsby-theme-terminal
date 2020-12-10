@@ -4,15 +4,14 @@ import { Flex, Button, Box } from 'theme-ui'
 import { useAllMdx } from '../../data'
 import { Link as GatsbyLink } from 'gatsby'
 
-export const PaginationButton = ({ filter, children, postPerPage }) => {
-  const postPerPage_ = postPerPage || 10
+export const PaginationButton = ({ filter, children, postPerPage=10 }) => {
   const urlParams = new URLSearchParams(window.location.search)
   const pageParams = urlParams.get('page')
 
   const currentPage = parseInt(pageParams || 1)
 
   const arr = useAllMdx(filter)
-  const lastPage = Math.ceil(arr.length / postPerPage_)
+  const lastPage = Math.ceil(arr.length / postPerPage)
   var nextUrl = ''
   var prevUrl = ''
 
@@ -21,8 +20,8 @@ export const PaginationButton = ({ filter, children, postPerPage }) => {
   // older post
   prevUrl = '?page=' + (currentPage + 1)
 
-  if (currentPage === 1) nextUrl = '/'
-  if (currentPage === lastPage) prevUrl = '/'
+  if (currentPage === 1 || arr.length <= postPerPage) nextUrl = '/'
+  if (currentPage === lastPage || arr.length <= postPerPage) prevUrl = '/'
 
   return (
     <Fragment>

@@ -3,16 +3,15 @@ import PropTypes from 'prop-types'
 
 import { useAllMdx } from '../../data'
 
-export const SourceListPagination = ({ filter, children, postPerPage }) => {
-  const postPerPage_ = postPerPage || 10
+export const SourceListPagination = ({ filter, children, postPerPage=10 }) => {
   const urlParams = new URLSearchParams(window.location.search)
   const pageParams = urlParams.get('page')
 
   const currentPage = parseInt(pageParams || 1)
-  const startInd = (currentPage - 1) * postPerPage_
+  const startInd = (currentPage - 1) * postPerPage
   return (
     <Fragment>
-      {children(useAllMdx(filter).splice(startInd, postPerPage_))}
+      {children(useAllMdx(filter).splice(startInd, postPerPage))}
     </Fragment>
   )
 }
