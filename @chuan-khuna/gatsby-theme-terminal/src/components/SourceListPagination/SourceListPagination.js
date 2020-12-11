@@ -2,14 +2,16 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import { useAllMdx } from '../../data'
+import { useLocation } from "@reach/router"
+import queryString from 'query-string'
 
 export const SourceListPagination = ({
   filter,
   children,
   postPerPage = 10,
 }) => {
-  const urlParams = new URLSearchParams(window.location.search)
-  const pageParams = urlParams.get('page')
+  const location = useLocation()
+  const pageParams = queryString.parse(location.search).page
 
   const currentPage = parseInt(pageParams || 1)
   const startInd = (currentPage - 1) * postPerPage
