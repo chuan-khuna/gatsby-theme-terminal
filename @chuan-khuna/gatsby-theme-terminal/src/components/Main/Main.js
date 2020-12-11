@@ -11,7 +11,7 @@ import { useConfig } from '../../data'
 import * as themeUiComponents from 'theme-ui'
 import Img from 'gatsby-image'
 
-import { Container, Box, Close, Image, MenuButton } from 'theme-ui'
+import { Container, Box, Close, Image, MenuButton, Flex } from 'theme-ui'
 import { transparentize } from '@theme-ui/color'
 
 // Theme specific componenbts
@@ -24,6 +24,7 @@ import { SourceDays } from '../SourceDays'
 import { SourceMonths } from '../SourceMonths'
 import { SourceWords } from '../SourceWords'
 import { SourceTags } from '../SourceTags'
+import { Footer } from '../Footer'
 
 const components = {
   pre: ({ children }) => <Fragment>{children}</Fragment>,
@@ -37,6 +38,7 @@ const components = {
   SourceMonths,
   SourceWords,
   SourceTags,
+  Footer,
   EmbeddedImage: props => <Image src={props.src.fluid.src} />,
   Img,
   ...themeUiComponents,
@@ -181,6 +183,7 @@ export const Main = ({ children }) => {
             }}
           >
             {children}
+            <Footer />
           </Box>
         </MDXProvider>
       </Container>
