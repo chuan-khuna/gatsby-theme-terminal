@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Flex, Button, Box } from 'theme-ui'
 import { useAllMdx } from '../../data'
 import { Link as GatsbyLink } from 'gatsby'
-import { useLocation } from "@reach/router"
+import { useLocation } from '@reach/router'
 import queryString from 'query-string'
 
 export const PaginationButton = ({ filter, children, postPerPage = 10 }) => {

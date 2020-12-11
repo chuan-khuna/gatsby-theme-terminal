@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import { useAllMdx } from '../../data'
-import { useLocation } from "@reach/router"
+import { useLocation } from '@reach/router'
 import queryString from 'query-string'
 
 export const SourceListPagination = ({
