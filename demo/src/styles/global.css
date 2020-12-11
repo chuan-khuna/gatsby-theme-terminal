@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../../static/fonts/mono/SpaceMono-Regular.ttf") format("truetype");
+} 
+
+@font-face {
+  font-family: "Sarabun";
+  src: url("../../static/fonts/Sarabun-Regular.ttf") format("truetype");
+} 
