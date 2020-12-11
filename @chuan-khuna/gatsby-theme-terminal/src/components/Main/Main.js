@@ -11,7 +11,7 @@ import { useConfig } from '../../data'
 import * as themeUiComponents from 'theme-ui'
 import Img from 'gatsby-image'
 
-import { Container, Box, Close, Image, MenuButton, Flex } from 'theme-ui'
+import { Container, Box, Close, Image, MenuButton } from 'theme-ui'
 import { transparentize } from '@theme-ui/color'
 
 // Theme specific componenbts
