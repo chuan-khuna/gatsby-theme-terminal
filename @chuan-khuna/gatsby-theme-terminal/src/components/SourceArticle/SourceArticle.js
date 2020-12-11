@@ -52,9 +52,11 @@ export const SourceArticle = ({
         )}
         {featuredImageUrl && <Image src={featuredImageUrl} />}
       </Box>
-      <Heading as="h1" variant="styles.h1" sx={{ mb: 4 }}>
-        {title}
-      </Heading>
+      {title && (
+        <Heading as="h1" variant="styles.h1" sx={{ mb: 4 }}>
+          {title}
+        </Heading>
+      )}
       <Flex sx={{ flexWrap: 'wrap' }}>
         <Box
           sx={{
@@ -85,29 +87,30 @@ export const SourceArticle = ({
         </Box>
       </Flex>
 
-      <Flex sx={{ flexWrap: 'wrap' }}>
-        <Box
-          sx={{
-            width: ['100%', '50%'],
-          }}
-        >
-          <Text
-            sx={{ color: 'muted' }}
-          >{`${timeToRead} min read / ${wordCount.words} words`}</Text>
-        </Box>
-        {author && (
+      {title && (
+        <Flex sx={{ flexWrap: 'wrap' }}>
           <Box
             sx={{
               width: ['100%', '50%'],
             }}
           >
-            <Text sx={{ color: 'muted', textAlign: ['left', 'right'] }}>
-              Author: {author}
-            </Text>
+            <Text
+              sx={{ color: 'muted' }}
+            >{`${timeToRead} min read / ${wordCount.words} words`}</Text>
           </Box>
-        )}
-      </Flex>
-
+          {author && (
+            <Box
+              sx={{
+                width: ['100%', '50%'],
+              }}
+            >
+              <Text sx={{ color: 'muted', textAlign: ['left', 'right'] }}>
+                Author: {author}
+              </Text>
+            </Box>
+          )}
+        </Flex>
+      )}
       <Divider />
 
       {tags &&
