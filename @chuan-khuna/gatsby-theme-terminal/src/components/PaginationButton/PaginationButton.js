@@ -4,7 +4,7 @@ import { Flex, Button, Box } from 'theme-ui'
 import { useAllMdx } from '../../data'
 import { Link as GatsbyLink } from 'gatsby'
 
-export const PaginationButton = ({ filter, children, postPerPage=10 }) => {
+export const PaginationButton = ({ filter, children, postPerPage = 10 }) => {
   const urlParams = new URLSearchParams(window.location.search)
   const pageParams = urlParams.get('page')
 
