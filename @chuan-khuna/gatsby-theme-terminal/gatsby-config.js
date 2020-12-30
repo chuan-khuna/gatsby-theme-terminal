@@ -59,6 +59,8 @@ module.exports = themeOptions => {
               options: {
                 maxWidth: 1080,
                 linkImagesToOriginal: true,
+                quality: 80,
+                backgroundColor: 'transparent',
               },
             },
             {
@@ -79,6 +81,8 @@ module.exports = themeOptions => {
               options: {
                 maxWidth: 1080,
                 linkImagesToOriginal: true,
+                quality: 80,
+                backgroundColor: 'transparent',
               },
             },
             {
