@@ -11,5 +11,8 @@
   "workspaces": [
     "@chuan-khuna/gatsby-theme-terminal",
     "demo"
-  ]
+  ],
+  "dependencies": {
+    "gatsby-remark-table-of-contents": "^1.0.0"
+  }
 }
