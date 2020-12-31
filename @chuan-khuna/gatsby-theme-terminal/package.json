@@ -1,7 +1,7 @@
 {
   "name": "@chuan-khuna/gatsby-theme-terminal",
   "description": "A zero component Gatsby theme for developers",
-  "version": "20201211.20.43",
+  "version": "20201231.08.32",
   "author": "Chuan Khuna",
   "owener": "chuan-khuna",
   "dependencies": {
