@@ -66,18 +66,6 @@ module.exports = themeOptions => {
             {
               resolve: `gatsby-remark-katex`,
             },
-            `gatsby-remark-autolink-headers`,
-            {
-              resolve: `gatsby-remark-table-of-contents`,
-              options: {
-                exclude: 'Table of Contents',
-                tight: false,
-                ordered: false,
-                fromHeading: 1,
-                toHeading: 6,
-                className: 'table-of-contents',
-              },
-            },
           ],
         },
       },
@@ -99,18 +87,6 @@ module.exports = themeOptions => {
             },
             {
               resolve: `gatsby-remark-katex`,
-            },
-            `gatsby-remark-autolink-headers`,
-            {
-              resolve: `gatsby-remark-table-of-contents`,
-              options: {
-                exclude: 'Table of Contents',
-                tight: true,
-                ordered: true,
-                fromHeading: 1,
-                toHeading: 3,
-                className: 'table-of-contents',
-              },
             },
           ],
           remarkPlugins: [require('remark-html-katex')],
