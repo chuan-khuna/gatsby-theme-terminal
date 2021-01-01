@@ -6,7 +6,7 @@ export default {
   fonts: {
     body: '"SpaceMono", "Sarabun"',
     heading: '"SpaceMono", "Sarabun"',
-    mono: '"SpaceMono", "Sarabun"',
+    code: '"SpaceMono", "Sarabun"',
   },
   colors: {
     ...baseTheme.colors,
