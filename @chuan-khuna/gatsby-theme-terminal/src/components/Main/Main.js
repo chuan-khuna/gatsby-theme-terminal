@@ -2,6 +2,7 @@ import React, { Fragment, useContext } from 'react'
 import PropTypes from 'prop-types'
 import { MDXProvider } from '@mdx-js/react'
 import Prism from '@theme-ui/prism'
+import { Link as GatsbyLink } from 'gatsby'
 
 import { Context } from '../../context'
 import { Nav } from '../Nav'
@@ -11,7 +12,7 @@ import { useConfig } from '../../data'
 import * as themeUiComponents from 'theme-ui'
 import Img from 'gatsby-image'
 
-import { Container, Box, Close, Image, MenuButton } from 'theme-ui'
+import { Container, Box, Close, Image, MenuButton, Link } from 'theme-ui'
 import { transparentize } from '@theme-ui/color'
 
 // Theme specific componenbts
@@ -27,6 +28,26 @@ import { SourceTags } from '../SourceTags'
 import { Footer } from '../Footer'
 
 const components = {
+  a: ({ href, children }) => {
+    // If it's an external url use Link and target _blank
+    if (href.match(/^(http|https):/g)) {
+      return (
+        <Link href={href} target="_blank">
+          {children}
+        </Link>
+      )
+    }
+    // if it's a # use Link which will fires an anchorScroll in gatsby-browser
+    if (href.match(/#/gi)) {
+      return <Link href={href}>{children}</Link>
+    }
+    // if it's anything else use GatsbyLink
+    return (
+      <Link as={GatsbyLink} to={href}>
+        {children}
+      </Link>
+    )
+  },
   pre: ({ children }) => <Fragment>{children}</Fragment>,
   code: Prism,
   Fragment,
