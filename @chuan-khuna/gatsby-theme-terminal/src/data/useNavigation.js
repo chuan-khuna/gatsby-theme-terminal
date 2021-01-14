@@ -7,7 +7,10 @@ export const useNavigation = () => {
         allMdx(
           filter: {
             fileAbsolutePath: { regex: "//pages//" }
-            frontmatter: { navigationLabel: { ne: "dummy" } }
+            frontmatter: { 
+              navigationLabel: { ne: "dummy" }
+              hidden: {ne: true}
+            }
           }
         ) {
           edges {
@@ -19,6 +22,7 @@ export const useNavigation = () => {
               frontmatter {
                 title
                 navigationLabel
+                hidden
               }
             }
           }
