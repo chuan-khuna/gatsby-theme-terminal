@@ -3,21 +3,21 @@
   "private": true,
   "description": "A simple starter using gatsby-theme-terminal",
   "version": "0.1.0",
-  "author": "Paul Scanlon <pauliescanlon@gmail.com>",
+  "author": "Chuan Khuna",
   "dependencies": {
-    "@mdx-js/mdx": "^1.5.5",
-    "@mdx-js/react": "^1.5.5",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
     "@chuan-khuna/gatsby-theme-terminal": "*",
-    "date-fns": "^2.10.0",
-    "gatsby": "^2.24.12",
-    "gatsby-plugin-google-analytics": "^2.1.36",
-    "gatsby-plugin-mdx": "^1.0.73",
-    "gatsby-source-filesystem": "^2.1.46",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "date-fns": "^2.16.1",
+    "gatsby-plugin-google-analytics": "^2.9.0",
+    "gatsby-plugin-mdx": "^1.8.0",
+    "gatsby-source-filesystem": "^2.9.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "gatsby": "^2.30.2"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^2.2.1"
   },
   "keywords": [
     "gatsby"
