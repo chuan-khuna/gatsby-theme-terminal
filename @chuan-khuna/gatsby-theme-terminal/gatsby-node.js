@@ -1,4 +1,8 @@
-const { createFilePath } = require('gatsby-source-filesystem')
+const {
+  createFilePath,
+  createRemoteFileNode,
+} = require('gatsby-source-filesystem')
+
 const path = require('path')
 
 // String used to differenciate between .mdx sources from pages and .mdx souced from "source"
@@ -63,9 +67,6 @@ exports.onCreateNode = async (
       node.frontmatter.featuredImageUrl &&
       node.frontmatter.featuredImageUrl !== undefined
     ) {
-      console.log('')
-      console.log(node.frontmatter.featuredImageUrlSharp)
-      console.log('')
       let fileNode = await createRemoteFileNode({
         url: node.frontmatter.featuredImageUrl,
         parentNodeId: node.id,
