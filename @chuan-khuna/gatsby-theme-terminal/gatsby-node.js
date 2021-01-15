@@ -30,7 +30,6 @@ exports.onCreateNode = async (
   themeOptions
 ) => {
   const { source } = themeOptions
-  const { createNodeField } = actions
 
   if (node.internal.type === 'Mdx' && !node.internal.fieldOwners) {
     let path = source
