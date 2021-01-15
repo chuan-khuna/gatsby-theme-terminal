@@ -66,6 +66,24 @@ module.exports = themeOptions => {
             {
               resolve: `gatsby-remark-katex`,
             },
+            {
+              resolve: `gatsby-remark-table-of-contents`,
+              options: {
+                exclude: "Table of Contents",
+                tight: true,
+                ordered: false,
+                fromHeading: 1,
+                toHeading: 3,
+                className: "table-of-contents"
+              },
+            },
+            {
+              resolve: `gatsby-remark-autolink-headers`,
+              options: {
+                offsetY: `15`,
+                icon: false,
+              }
+            },
           ],
         },
       },
@@ -87,6 +105,24 @@ module.exports = themeOptions => {
             },
             {
               resolve: `gatsby-remark-katex`,
+            },
+            {
+              resolve: `gatsby-remark-table-of-contents`,
+              options: {
+                exclude: "Table of Contents",
+                tight: true,
+                ordered: false,
+                fromHeading: 1,
+                toHeading: 3,
+                className: "table-of-contents"
+              },
+            },
+            {
+              resolve: `gatsby-remark-autolink-headers`,
+              options: {
+                offsetY: `16`,
+                icon: false,
+              }
             },
           ],
           remarkPlugins: [require('remark-html-katex')],
