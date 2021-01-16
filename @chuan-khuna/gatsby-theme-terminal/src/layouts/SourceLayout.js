@@ -54,7 +54,7 @@ const SourceLayout = ({
   const combinedEmbedded = [
     ...(embeddedImages || []),
     ...(embeddedImageUrls || []),
-  ].filter(n => n)
+  ].filter((n) => n)
 
   const embedded = combinedEmbedded.reduce((images, image, index) => {
     images[`${IMAGE_KEY}${index + 1}`] = images[`${IMAGE_KEY}${index + 1}`] || {

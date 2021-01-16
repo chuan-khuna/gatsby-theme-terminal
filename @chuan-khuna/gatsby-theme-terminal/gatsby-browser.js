@@ -1,6 +1,6 @@
 require(`katex/dist/katex.min.css`)
 
-const anchorScroll = location => {
+const anchorScroll = (location) => {
   const anchor = document.querySelectorAll(`a[href="${location.hash}"]`)[0]
   if (location && location.hash && anchor) {
     const item = document.querySelectorAll(`a[href="${location.hash}"]`)[0]

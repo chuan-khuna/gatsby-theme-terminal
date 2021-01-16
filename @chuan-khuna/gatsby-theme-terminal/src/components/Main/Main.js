@@ -60,7 +60,7 @@ const components = {
   SourceWords,
   SourceTags,
   Footer,
-  EmbeddedImage: props => <Image src={props.src.fluid.src} />,
+  EmbeddedImage: (props) => <Image src={props.src.fluid.src} />,
   Img,
   ...themeUiComponents,
 }
@@ -86,11 +86,11 @@ export const Main = ({ children }) => {
         sx={{
           alignItems: 'center',
           backgroundColor: 'background',
-          borderBottom: theme =>
+          borderBottom: (theme) =>
             `${theme.borderWidths[1]}px solid ${theme.colors.surface}`,
           display: 'flex',
           justifyContent: 'space-between',
-          height: theme => `${theme.space[5]}px`,
+          height: (theme) => `${theme.space[5]}px`,
           ml: [0, 0, 0, sidebarWidth],
           overflow: 'hidden',
           position: 'fixed',
@@ -145,7 +145,7 @@ export const Main = ({ children }) => {
         >
           <Box
             sx={{
-              borderRight: theme =>
+              borderRight: (theme) =>
                 `${theme.borderWidths[1]}px solid ${theme.colors.surface}`,
               height: '100%',
               left: [
@@ -186,7 +186,7 @@ export const Main = ({ children }) => {
             },
           }}
           onClick={() => dispatch({ type: 'closeNav' })}
-          onKeyDown={event =>
+          onKeyDown={(event) =>
             event.key === 'Enter' ? dispatch({ type: 'closeNav' }) : {}
           }
         >

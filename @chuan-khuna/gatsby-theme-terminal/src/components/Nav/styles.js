@@ -3,15 +3,15 @@ import * as theme from '../../gatsby-plugin-theme-ui'
 export const logo = {
   alignItems: 'center',
   display: 'flex',
-  height: theme => `${theme.space[5]}px`,
+  height: (theme) => `${theme.space[5]}px`,
   justifyContent: ['flex-start', 'flex-start', 'flex-start', 'flex-end'],
   overFlow: 'hidden',
-  p: theme => `0px ${theme.space[4]}px`,
+  p: (theme) => `0px ${theme.space[4]}px`,
 }
 
 export const nav = {
   height: '100%',
-  p: theme => `${theme.space[3]}px ${theme.space[4]}px`,
+  p: (theme) => `${theme.space[3]}px ${theme.space[4]}px`,
 }
 
 export const ul = {

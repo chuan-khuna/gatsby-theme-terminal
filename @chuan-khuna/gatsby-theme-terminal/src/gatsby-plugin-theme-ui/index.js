@@ -53,7 +53,7 @@ export default {
       transition: '.2s linear box-shadow',
       ':focus': {
         outline: 'none',
-        boxShadow: theme => `0 2px 0 0 ${theme.colors.primary}`,
+        boxShadow: (theme) => `0 2px 0 0 ${theme.colors.primary}`,
       },
     },
     h1: {
@@ -146,9 +146,9 @@ export default {
         backgroundColor: lighten('background', 0.03),
         tr: {
           th: {
-            border: theme =>
+            border: (theme) =>
               `${theme.borderWidths[1]}px solid ${theme.colors.surface}`,
-            padding: theme => `${theme.space[2]}px ${theme.space[3]}px`,
+            padding: (theme) => `${theme.space[2]}px ${theme.space[3]}px`,
           },
         },
         td: {
@@ -161,8 +161,8 @@ export default {
         },
         tr: {
           td: {
-            padding: theme => `${theme.space[2]}px ${theme.space[3]}px`,
-            border: theme =>
+            padding: (theme) => `${theme.space[2]}px ${theme.space[3]}px`,
+            border: (theme) =>
               `${theme.borderWidths[1]}px solid ${theme.colors.surface}`,
           },
         },
@@ -296,7 +296,7 @@ export default {
       ':focus': {
         outline: 'none',
         transition: '.2s linear box-shadow',
-        boxShadow: theme => `0 0 0 2px ${theme.colors.muted}`,
+        boxShadow: (theme) => `0 0 0 2px ${theme.colors.muted}`,
       },
     },
     primary: {

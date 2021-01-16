@@ -59,11 +59,11 @@ export const SourceWords = ({ filter, children }) => {
   const timeToReadAverage = Math.round(timeToReadTotal / mdx.length)
 
   const wordCountHighest = Math.max(
-    ...mdx.map(item => item.node.wordCount.words)
+    ...mdx.map((item) => item.node.wordCount.words)
   )
 
   const wordCountLowest = Math.min(
-    ...mdx.map(item => item.node.wordCount.words)
+    ...mdx.map((item) => item.node.wordCount.words)
   )
 
   const wordCountByMonth = mdx
@@ -76,7 +76,7 @@ export const SourceWords = ({ filter, children }) => {
 
       return items
     }, [])
-    .map(year => {
+    .map((year) => {
       let yearValue = year.reduce((a, b) =>
         b.year !== 0 ? (a = b.year) : null
       )

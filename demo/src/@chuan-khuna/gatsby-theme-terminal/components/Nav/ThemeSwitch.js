@@ -24,7 +24,7 @@ export default function ThemeSwitch() {
       <Divider />
       <Button
         variant="muted"
-        onClick={e => {
+        onClick={(e) => {
           setColorMode(colorMode === "default" ? "light" : "default")
         }}
       >

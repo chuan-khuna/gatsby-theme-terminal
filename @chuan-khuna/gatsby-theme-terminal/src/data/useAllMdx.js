@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 const DRAFT = 'draft'
 
-export const useAllMdx = filter => {
+export const useAllMdx = (filter) => {
   // This query is a duplicate of singleMdx so if you update this one update that one too! in layouts/SourceLayout
   const query = useStaticQuery(graphql`
     query allMdx {
@@ -101,15 +101,15 @@ export const useAllMdx = filter => {
 
   if (!filter)
     return query.allMdx.edges.filter(
-      edge =>
+      (edge) =>
         edge.node.frontmatter.status !== DRAFT &&
         edge.node.frontmatter.isPrivate !== true
     )
 
   return query.allMdx.edges
-    .map(edge => edge)
+    .map((edge) => edge)
     .filter(
-      edge =>
+      (edge) =>
         edge.node.fields.slug.includes(filter) &&
         edge.node.frontmatter.status !== DRAFT &&
         edge.node.frontmatter.isPrivate !== true

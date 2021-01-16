@@ -24,7 +24,7 @@ export const Nav = () => {
         sx={{
           alignItems: "center",
           display: "flex",
-          height: theme => `${theme.space[5]}px`,
+          height: (theme) => `${theme.space[5]}px`,
           justifyContent: [
             "flex-start",
             "flex-start",

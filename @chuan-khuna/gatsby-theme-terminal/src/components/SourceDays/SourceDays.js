@@ -47,7 +47,7 @@ export const SourceDays = ({ filter, children }) => {
 
       return items
     }, [])
-    .map(year => {
+    .map((year) => {
       let yearValue = year.reduce((a, b) =>
         b.year !== 0 ? (a = b.year) : null
       )
@@ -65,9 +65,9 @@ export const SourceDays = ({ filter, children }) => {
     })
 
   const days = Object.values(
-    count.map(year => {
+    count.map((year) => {
       let total = year.reduce((a, b) => ({ count: a.count + b.count }))
-      return year.map(day => {
+      return year.map((day) => {
         return {
           ...day,
           percent: Math.round((day.count / total.count) * 100),

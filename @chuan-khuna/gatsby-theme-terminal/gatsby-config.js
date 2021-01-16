@@ -1,12 +1,12 @@
 const path = require('path')
 
-module.exports = themeOptions => {
+module.exports = (themeOptions) => {
   const { source } = themeOptions
 
   let filesystemSources = []
 
   if (source) {
-    const sourceFilesystemOption = name => {
+    const sourceFilesystemOption = (name) => {
       if (source) {
         return {
           resolve: `gatsby-source-filesystem`,
@@ -69,12 +69,12 @@ module.exports = themeOptions => {
             {
               resolve: `gatsby-remark-table-of-contents`,
               options: {
-                exclude: "Table of Contents",
+                exclude: 'Table of Contents',
                 tight: true,
                 ordered: false,
                 fromHeading: 1,
                 toHeading: 3,
-                className: "table-of-contents"
+                className: 'table-of-contents',
               },
             },
             {
@@ -82,7 +82,7 @@ module.exports = themeOptions => {
               options: {
                 offsetY: `15`,
                 icon: false,
-              }
+              },
             },
           ],
         },
@@ -109,12 +109,12 @@ module.exports = themeOptions => {
             {
               resolve: `gatsby-remark-table-of-contents`,
               options: {
-                exclude: "Table of Contents",
+                exclude: 'Table of Contents',
                 tight: true,
                 ordered: false,
                 fromHeading: 1,
                 toHeading: 3,
-                className: "table-of-contents"
+                className: 'table-of-contents',
               },
             },
             {
@@ -122,7 +122,7 @@ module.exports = themeOptions => {
               options: {
                 offsetY: `16`,
                 icon: false,
-              }
+              },
             },
           ],
           remarkPlugins: [require('remark-html-katex')],
