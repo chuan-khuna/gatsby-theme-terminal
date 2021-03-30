@@ -15,7 +15,7 @@ export const useAllMdx = (filter) => {
           }
           fields: { parent: { ne: "" } }
         }
-        sort: { order: DESC, fields: [frontmatter___dateModified, frontmatter___date] }
+        sort: {order: [DESC, DESC], fields: [frontmatter___dateModified, frontmatter___date]}
       ) {
         edges {
           node {
