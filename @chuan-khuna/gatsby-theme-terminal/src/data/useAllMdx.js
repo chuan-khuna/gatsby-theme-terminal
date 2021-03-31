@@ -51,6 +51,7 @@ export const useAllMdx = (filter) => {
               status
               isPrivate
               isNote
+              growthStage
               url
               misc
               pinned
