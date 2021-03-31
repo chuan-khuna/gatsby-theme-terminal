@@ -27,6 +27,7 @@ export const SourceArticle = ({
   author,
   isPrivate,
   isNote,
+  growthStage,
   featuredImage,
   featuredImageUrlSharp,
   embedded,
@@ -158,6 +159,8 @@ SourceArticle.propTypes = {
   isPrivate: PropTypes.bool,
   /** isNote from frontMatter */
   isNote: PropTypes.bool,
+  /** isNote from frontMatter */
+  growthStage: PropTypes.string,
   /** FeaturedImage from frontmatter */
   featuredImage: PropTypes.any,
   /** FeaturedImageUrl from frontmatter */
