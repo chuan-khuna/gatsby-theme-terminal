@@ -50,6 +50,7 @@ export const useAllMdx = (filter) => {
               author
               status
               isPrivate
+              isNote
               url
               misc
               pinned
