@@ -145,6 +145,8 @@ export const singleMdx = graphql`
         author
         status
         isPrivate
+        isNote
+        growthStage
         url
         misc
         pinned
