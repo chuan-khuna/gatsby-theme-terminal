@@ -26,6 +26,7 @@ export const SourceArticle = ({
   dateModified,
   author,
   isPrivate,
+  isNote,
   featuredImage,
   featuredImageUrlSharp,
   embedded,
@@ -155,6 +156,8 @@ SourceArticle.propTypes = {
   author: PropTypes.string,
   /** isPrivate from frontMatter */
   isPrivate: PropTypes.bool,
+  /** isNote from frontMatter */
+  isNote: PropTypes.bool,
   /** FeaturedImage from frontmatter */
   featuredImage: PropTypes.any,
   /** FeaturedImageUrl from frontmatter */
