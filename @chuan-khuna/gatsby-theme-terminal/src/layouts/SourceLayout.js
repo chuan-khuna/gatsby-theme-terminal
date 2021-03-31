@@ -36,6 +36,7 @@ const SourceLayout = ({
     dateModified,
     author,
     isPrivate,
+    isNote,
     featuredImage,
     embeddedImages,
     embeddedImageUrls,
@@ -88,6 +89,7 @@ const SourceLayout = ({
                 dateModified={dateModified}
                 author={author}
                 isPrivate={isPrivate}
+                isNote={isNote}
                 featuredImage={featuredImage}
                 featuredImageUrlSharp={featuredImageUrlSharp}
                 embedded={embedded}
