@@ -128,7 +128,7 @@ module.exports = (themeOptions) => {
               resolve: `gatsby-remark-double-brackets-link`,
               options: {
                 stripBrackets: true,
-                titleToURLPath: `${__dirname}/src/double-brackets-config/resolve-url.js`
+                titleToURLPath: `${__dirname}/src/double-brackets-config/resolve-url.js`,
               },
             },
           ],
@@ -145,7 +145,7 @@ module.exports = (themeOptions) => {
       {
         resolve: `gatsby-transformer-markdown-references`,
         options: {
-          types: ["Mdx"], // or ["MarkdownRemark"] (or both)
+          types: ['Mdx'], // or ["MarkdownRemark"] (or both)
         },
       },
 
