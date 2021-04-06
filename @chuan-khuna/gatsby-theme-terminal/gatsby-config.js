@@ -128,7 +128,7 @@ module.exports = (themeOptions) => {
               resolve: `gatsby-remark-double-brackets-link`,
               options: {
                 stripBrackets: true,
-                titleToURLPath: `${__dirname}/resolve-url.js`
+                titleToURLPath: `${__dirname}/src/double-brackets-config/resolve-url.js`
               },
             },
           ],
