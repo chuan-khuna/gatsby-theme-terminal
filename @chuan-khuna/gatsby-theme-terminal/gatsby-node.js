@@ -42,7 +42,7 @@ exports.onCreateNode = async (
     if (Array.isArray(source)) {
       path = node.fileAbsolutePath
         .split('/')
-        .filter((str) => source.includes(str))
+        .find((str) => source.includes(str))
         .toString()
     }
     createNodeField({
