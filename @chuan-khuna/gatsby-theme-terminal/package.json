@@ -6,6 +6,7 @@
   "owener": "chuan-khuna",
   "dependencies": {
     "@emotion/core": "^10.1.1",
+    "@gatsby-project-kb/transformer-wiki-references": "^0.3.0-alpha.1",
     "@reach/router": "^1.3.4",
     "@theme-ui/color": "^0.3.5",
     "@theme-ui/prism": "^0.3.5",
@@ -20,6 +21,7 @@
     "gatsby-remark-images": "^3.9.0",
     "gatsby-remark-katex": "^3.8.0",
     "gatsby-remark-table-of-contents": "^1.0.0",
+    "gatsby-remark-wiki-link": "^0.3.0-alpha.0",
     "gatsby-transformer-markdown-references": "^0.1.5",
     "gatsby-transformer-remark": "^2.14.0",
     "gatsby-transformer-sharp": "^2.10.1",
