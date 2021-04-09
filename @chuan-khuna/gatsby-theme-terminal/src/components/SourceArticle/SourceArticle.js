@@ -14,6 +14,7 @@ import {
 import { mix } from '@theme-ui/color'
 import { format } from 'date-fns'
 import Img from 'gatsby-image'
+import AnchorTag from '../AnchorTag'
 
 import { Main } from '../Main'
 
@@ -34,7 +35,18 @@ export const SourceArticle = ({
   body,
   timeToRead,
   wordCount,
+  outboundReferences,
 }) => {
+
+  const ProvidedAnchorTag = (anchorProps) => {
+    return (
+      <AnchorTag
+        {...anchorProps}
+        references={outboundReferences}
+      ></AnchorTag>
+    )
+  }
+
   return (
     <Main>
       {title ? (
@@ -137,7 +149,7 @@ export const SourceArticle = ({
         ))}
 
       <Divider />
-      <MDXProvider>
+      <MDXProvider components={{ a: ProvidedAnchorTag }}>
         <MDXRenderer embedded={embedded}>{body}</MDXRenderer>
       </MDXProvider>
     </Main>

@@ -125,10 +125,9 @@ module.exports = (themeOptions) => {
               },
             },
             {
-              resolve: `gatsby-remark-double-brackets-link`,
+              resolve: 'gatsby-remark-wiki-link',
               options: {
                 stripBrackets: true,
-                titleToURLPath: `${__dirname}/src/double-brackets-config/resolve-url.js`,
               },
             },
           ],
@@ -143,12 +142,11 @@ module.exports = (themeOptions) => {
         },
       },
       {
-        resolve: `gatsby-transformer-markdown-references`,
+        resolve: `@gatsby-project-kb/transformer-wiki-references`,
         options: {
           types: ['Mdx'], // or ["MarkdownRemark"] (or both)
         },
       },
-
       // Theme pages (Dummy page)
       {
         resolve: 'gatsby-source-filesystem',
