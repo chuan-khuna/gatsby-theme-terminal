@@ -9,12 +9,7 @@ function padHrefWithAnchor(href, anchor) {
   return href
 }
 
-const AnchorTag = ({
-  title,
-  href,
-  references = [],
-  ...restProps
-}) => {
+const AnchorTag = ({ title, href, references = [], ...restProps }) => {
   const anchorSlug = href
 
   const ref = references.find((x) => {
@@ -22,19 +17,18 @@ const AnchorTag = ({
     if (matched) return matched
     if (x.target) {
       const frontmatter = x.target.frontmatter || {}
-      matched = (
+      matched =
         frontmatter.title === title ||
         frontmatter.alias === title ||
         (frontmatter.aliases || []).includes(title) ||
         withPrefix(x.target.fields.slug || '') === withPrefix(anchorSlug)
-      )
     }
     return matched
   })
 
   let child
 
-  if (ref && ref.target) {
+  if (ref && ref.target.fields.slug && title) {
     const fileds = ref.target.fields
     title = title || ref.refWord
     child = (
