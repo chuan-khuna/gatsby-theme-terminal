@@ -1,5 +1,6 @@
 import React from 'react'
 import { withPrefix, Link as GatsbyLink } from 'gatsby'
+import { Link } from 'theme-ui'
 import slugify from 'slugify'
 
 function padHrefWithAnchor(href, anchor) {
@@ -32,17 +33,19 @@ export const AnchorTag = ({ title, href, references = [], ...restProps }) => {
     const fileds = ref.target.fields
     title = title || ref.refWord
     child = (
-      <GatsbyLink
+      <Link
+        as={GatsbyLink}
         {...restProps}
         to={padHrefWithAnchor(fileds.slug, ref.targetAnchor)}
         title={title}
+        sx={{ color: 'secondary' }}
       >
         {title}
-      </GatsbyLink>
+      </Link>
     )
   } else {
     child = (
-      <a
+      <Link
         {...restProps}
         href={
           !href || (href.indexOf && href.indexOf('#') === 0)
@@ -50,7 +53,7 @@ export const AnchorTag = ({ title, href, references = [], ...restProps }) => {
             : withPrefix(href)
         }
         title={title}
-      />
+      ></Link>
     )
   }
 
