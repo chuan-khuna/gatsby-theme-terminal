@@ -6796,14 +6796,6 @@ gatsby-remark-autolink-headers@^2.9.0:
     mdast-util-to-string "^1.1.0"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-double-brackets-link@^0.1.8:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-double-brackets-link/-/gatsby-remark-double-brackets-link-0.1.8.tgz#2244ea750d738abaa5cb030d87d80ea7650ece57"
-  integrity sha512-YlNOCQT0a0PwV2jiAFl+ZkqaNy4iV9IfmfAmHuQjMZhJD2Cbz62Gcy72M4VUDSQS2242HbIbDibnncDtgQEjOg==
-  dependencies:
-    slugify "^1.4.0"
-    unist-util-visit "^2.0.2"
-
 gatsby-remark-images@^3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.9.0.tgz#f9b37a538be22ab5dd011550c11acee11f281766"
@@ -6876,11 +6868,6 @@ gatsby-telemetry@^1.8.1:
     lodash "^4.17.20"
     node-fetch "^2.6.1"
     uuid "3.4.0"
-
-gatsby-transformer-markdown-references@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-markdown-references/-/gatsby-transformer-markdown-references-0.1.5.tgz#4600a404f06f2e0aa528efea47ff2849734c6b6d"
-  integrity sha512-unflo9lH7wYvmuQtPA/Omdnr4sgRsmsAR0Ce+7xEwPcxqj0R0qYKJcyOdy4tg08Xc9Tgt7EJ6iILsxJX6YXpUg==
 
 gatsby-transformer-remark@^2.14.0:
   version "2.14.0"
@@ -13074,11 +13061,6 @@ slice-ansi@^2.1.0:
     ansi-styles "^3.2.0"
     astral-regex "^1.0.0"
     is-fullwidth-code-point "^2.0.0"
-
-slugify@^1.4.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.5.0.tgz#5f3c8e2a84105b54eb51486db1b468a599b3c9b8"
-  integrity sha512-Q2UPZ2udzquy1ElHfOLILMBMqBEXkiD3wE75qtBvV+FsDdZZjUqPZ44vqLTejAVq+wLLHacOMcENnP8+ZbzmIA==
 
 slugify@^1.4.4:
   version "1.4.6"
