@@ -14,7 +14,7 @@ import {
 import { mix } from '@theme-ui/color'
 import { format } from 'date-fns'
 import Img from 'gatsby-image'
-import AnchorTag from '../AnchorTag'
+import { AnchorTag } from '../AnchorTag'
 
 import { Main } from '../Main'
 
@@ -37,13 +37,9 @@ export const SourceArticle = ({
   wordCount,
   outboundReferences,
 }) => {
-
   const ProvidedAnchorTag = (anchorProps) => {
     return (
-      <AnchorTag
-        {...anchorProps}
-        references={outboundReferences}
-      ></AnchorTag>
+      <AnchorTag {...anchorProps} references={outboundReferences}></AnchorTag>
     )
   }
 

@@ -6,7 +6,7 @@
     "develop": "yarn workspace demo develop",
     "build": "yarn workspace demo build",
     "prettier": "yarn workspace demo format && yarn workspace @chuan-khuna/gatsby-theme-terminal format",
-    "release": "node copy-readme.js && yarn workspace @chuan-khuna/gatsby-theme-terminal publish"
+    "release": "yarn prettier && node copy-readme.js && yarn workspace @chuan-khuna/gatsby-theme-terminal publish"
   },
   "workspaces": [
     "@chuan-khuna/gatsby-theme-terminal",
