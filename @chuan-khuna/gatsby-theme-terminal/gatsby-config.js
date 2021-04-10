@@ -124,13 +124,6 @@ module.exports = (themeOptions) => {
                 icon: false,
               },
             },
-            {
-              resolve: `gatsby-remark-double-brackets-link`,
-              options: {
-                stripBrackets: true,
-                titleToURLPath: `${__dirname}/resolve-url.js`
-              },
-            },
           ],
           remarkPlugins: [require('remark-html-katex')],
         },
@@ -140,12 +133,6 @@ module.exports = (themeOptions) => {
         resolve: `gatsby-plugin-sharp`,
         options: {
           defaultQuality: 75,
-        },
-      },
-      {
-        resolve: `gatsby-transformer-markdown-references`,
-        options: {
-          types: ["Mdx"], // or ["MarkdownRemark"] (or both)
         },
       },
 
