@@ -40,11 +40,14 @@ exports.onCreateNode = async (
     const value = createFilePath({ node, getNode })
 
     if (Array.isArray(source)) {
-      path = node.fileAbsolutePath
-        .split('/')
-        // .find((str) => source.includes(str))
-        .filter((str) => source.includes(str))
-        .toString()
+      const parentFileNode = node.parent && getNode(node.parent)
+      if (parentFileNode) {
+        path = parentFileNode.sourceInstanceName
+      } else {
+        path = source.find((s) => {
+          return node.fileAbsolutePath.includes(s)
+        })
+      }
     }
     createNodeField({
       node,

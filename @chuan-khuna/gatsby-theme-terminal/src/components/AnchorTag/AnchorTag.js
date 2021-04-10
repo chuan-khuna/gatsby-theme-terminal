@@ -18,9 +18,9 @@ export const AnchorTag = ({ title, href, references = [], ...restProps }) => {
     if (matched) return matched
     if (x.target) {
       const frontmatter = x.target.frontmatter || {}
-      matched =
-        frontmatter.title === title ||
-        frontmatter.alias === title ||
+      matched = (
+        (frontmatter.title && frontmatter.title === title) ||
+        (frontmatter.alias && frontmatter.alias === title) ||
         (frontmatter.aliases || []).includes(title) ||
         withPrefix(x.target.fields.slug || '') === withPrefix(anchorSlug)
     }
