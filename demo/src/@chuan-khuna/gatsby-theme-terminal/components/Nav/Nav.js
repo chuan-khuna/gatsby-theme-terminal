@@ -14,9 +14,7 @@ export const Nav = () => {
 
   const navigation = edges.reduce((routes, route) => {
     const fields = route.node.fields || {}
-    return fields.slug === "/"
-      ? [route, ...routes]
-      : [...routes, route]
+    return fields.slug === "/" ? [route, ...routes] : [...routes, route]
   }, [])
 
   return (

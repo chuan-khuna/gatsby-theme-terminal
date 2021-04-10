@@ -1,5 +1,5 @@
 import React from 'react'
-import { withPrefix, Link } from 'gatsby'
+import { withPrefix, Link as GatsbyLink } from 'gatsby'
 import slugify from 'slugify'
 
 function padHrefWithAnchor(href, anchor) {
@@ -9,7 +9,7 @@ function padHrefWithAnchor(href, anchor) {
   return href
 }
 
-const AnchorTag = ({ title, href, references = [], ...restProps }) => {
+export const AnchorTag = ({ title, href, references = [], ...restProps }) => {
   const anchorSlug = href
 
   const ref = references.find((x) => {
@@ -32,13 +32,13 @@ const AnchorTag = ({ title, href, references = [], ...restProps }) => {
     const fileds = ref.target.fields
     title = title || ref.refWord
     child = (
-      <Link
+      <GatsbyLink
         {...restProps}
         to={padHrefWithAnchor(fileds.slug, ref.targetAnchor)}
         title={title}
       >
         {title}
-      </Link>
+      </GatsbyLink>
     )
   } else {
     child = (
@@ -56,5 +56,3 @@ const AnchorTag = ({ title, href, references = [], ...restProps }) => {
 
   return child
 }
-
-export default AnchorTag
