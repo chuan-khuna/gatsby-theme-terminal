@@ -8,6 +8,7 @@ export const useAllMdx = (filter) => {
     query allMdx {
       allMdx(
         filter: {
+          slug: {ne: null}
           frontmatter: {
             title: { ne: "dummy" }
             navigationLabel: { ne: "dummy" }
