@@ -204,6 +204,10 @@ export const singleMdx = graphql`
               owner
               parent
             }
+            frontmatter {
+              title
+              aliases
+            }
           }
         }
       }

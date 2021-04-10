@@ -18,10 +18,18 @@ const AnchorTag = ({
   const anchorSlug = href
 
   const ref = references.find((x) => {
-    return (
-      `/${x.refWord}` === href ||
-      withPrefix(x.target?.fields.slug || '') === withPrefix(anchorSlug)
-    )
+    let matched = `/${x.refWord}` === href
+    if (matched) return matched
+    if (x.target) {
+      const frontmatter = x.target.frontmatter || {}
+      matched = (
+        frontmatter.title === title ||
+        frontmatter.alias === title ||
+        (frontmatter.aliases || []).includes(title) ||
+        withPrefix(x.target.fields.slug || '') === withPrefix(anchorSlug)
+      )
+    }
+    return matched
   })
 
   let child
